@@ -10,7 +10,7 @@
         }
         .wrapper{
             padding: 50px;
-            background-color: rgba(101, 201, 163, 0.85);
+            background-color: rgba(123, 234, 194, 0.27);
         }
         a{
             color: #bc5e0a;
@@ -25,19 +25,25 @@
             height: 1px;
             border: none;
             outline: none;
-            background-color: #274e40;
+            background-color: rgba(11, 22, 15, 0.05);
         }
         p{
             text-indent: 2em;
-            line-height: 20px;
+            line-height: 24px;
+            color: rgba(12, 24, 18, 0.6);
+        }
+        span{
+            line-height: 18px;
+            color: rgba(12, 24, 18, 0.6);
         }
         h1{
             text-align: center;
+            color: #08887c;
         }
         pre{
             padding: 20px;
-            background-color: #006151;
-            color: #64cca1;
+            background-color: rgba(0, 169, 143, 0.45);
+            color: #05524a;
             font-size: 14px;
             border-radius: 15px;
         }
@@ -203,14 +209,15 @@
     <p>controls是播放器的控制器</p>
     <p>video标签中还可以加入data-setup=''配置选项,例如data-setup='{ "controls": true, "autoplay": false, "preload": "auto" },
         如果不写在video标签中,也可以写在js代码中,执行videojs函数的时候可以带三个参数,第二个参数就是配置选项。如下所示:<br/>
-        <pre>
+    </p>
+    <pre>
         videojs(document.getElementById('example_video_1'), {}, function() {
         // This is functionally the same as the previous example.
         });
     </pre>
-    如果想了解更具体的配置,可以在进入到github中了解。<br>
+    <span>如果想了解更具体的配置,可以在进入到github中了解。</span>
     <a href="https://github.com/videojs/video.js/blob/stable/docs/index.md">https://github.com/videojs/video.js/blob/stable/docs/index.md</a>
-    </p>
+
 <pre>
     &lt;video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered" preload="none" controls&gt;
         &lt;source src="http://200005902.vod.myqcloud.com/200005902_a8e9cf4e9d68494cb132168c4b386934.f0.mp4" type="video/mp4"/&gt;
@@ -242,7 +249,7 @@ $(function () {
     });
 });
     </pre>
-    下面是其他方法的示例,具体内容还可以进入这个地址了解:
+    <span>下面是其他方法的示例,具体内容还可以进入这个地址了解:</span>
     <br>
     <a href="http://www.tuicool.com/articles/7jYvQrR">http://www.tuicool.com/articles/7jYvQrR</a>
 
