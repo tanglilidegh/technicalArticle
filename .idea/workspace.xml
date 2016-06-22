@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="420ade8f-da1f-4dfc-8fc2-591e29287805" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="420ade8f-da1f-4dfc-8fc2-591e29287805" name="Default" comment="" />
     <ignored path="technicalArticle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +34,8 @@
       <file leaf-file-name="commin-js.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commin-js.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2777">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            <state relative-caret-position="761">
+              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#is_weixin#0" expanded="false" />
               </folding>
@@ -200,12 +198,12 @@
       <option name="presentableId" value="Default" />
       <updated>1465903777856</updated>
       <workItem from="1465903779195" duration="9092000" />
-      <workItem from="1466154955848" duration="59000" />
+      <workItem from="1466154955848" duration="112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9151000" />
+    <option name="totallyTimeSpent" value="9204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1377" height="1053" extended-state="0" />
@@ -249,8 +247,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commin-js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2777">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="761">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc;n#is_weixin#0" expanded="false" />
           </folding>
