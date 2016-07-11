@@ -1,0 +1,24 @@
+@import '../helpers/px2rem';
+@import "../helpers/css3";
+@import "../main";
+body{
+  @include bg-color(#0f1130)
+}
+html{
+  @include bg-color(#0f1130)
+}
+
+.interest-explanation-page{
+  @include main-page-style;
+  @include px2rem(padding-top, 30px);
+  background-image: url("../../images/interest-explanation-bg.png");
+
+  /* 权益说明 标题 START */
+  .sequence-title{
+    @include sequence-title-style;
+    @include title1;
+    background-image: url("../../images/sequence-rule-title.png");
+  }
+  /* 权益说明 标题 END */
+
+}

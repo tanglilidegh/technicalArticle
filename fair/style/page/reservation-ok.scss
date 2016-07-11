@@ -1,0 +1,68 @@
+@import '../helpers/setting';
+@import '../helpers/css3';
+@import "../helpers/mixin";
+@import '../helpers/px2rem';
+@import "../helpers/reset";
+@import "../main";
+
+body{
+  @include bg-color(#0f1130)
+}
+html{
+  @include bg-color(#0f1130)
+}
+.reservation-ok-page {
+  position: relative;
+  @include main-page-style;
+  color: #def4ed;
+  background-image: url("../../images/reservation-ok-bg.png");
+  .reservation-text{
+    @include font-dpr(14px);
+  }
+  .user-title{
+    @include px2rem(padding-top, 40px);
+    .user-img{
+      img{
+        @include px2rem(width,141px);
+        @include px2rem(height,140px);
+        @include box-shadow(0 0 10px 2px rgba(170,253,50,.32));
+        border-radius: 50%;
+      }
+    }
+    h2{
+      @include font-dpr(16px);
+    }
+    p{
+      @include px2rem(line-height, 50px);
+    }
+  }
+  .activities-btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    a{
+      display: block;
+      box-sizing: border-box;
+      width: 50%;
+      @include px2rem(height,78px);
+      @include px2rem(line-height,78px);
+      @include font-dpr(18px);
+      color: #fff;
+      background: #2cdbb2;
+    }
+    a:hover{
+      background: #2bc49c;
+      text-decoration: none;
+    }
+  }
+  .bl-2{
+    border-left: 2px solid #1ff5c3;
+  }
+  .fl{
+    float: left;
+  }
+  .fr{
+    float: right;
+  }
+}

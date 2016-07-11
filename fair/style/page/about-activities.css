@@ -1,0 +1,34 @@
+body {
+  background-color: #0f1130; }
+
+html {
+  background-color: #0f1130; }
+
+.about-activities-page {
+  position: relative;
+  overflow: auto;
+  padding-top: 0.8rem;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100%;
+  background-image: url("../../images/about-activities-bg1.png"); }
+  .about-activities-page .about-activities-text {
+    padding-left: 0rem;
+    margin-top: 2.4rem; }
+    .about-activities-page .about-activities-text h2 {
+      width: 100%;
+      text-align: center;
+      line-height: 0.53333rem; }
+  .about-activities-page h1 {
+    position: absolute;
+    top: 3.86667rem;
+    z-index: 10;
+    width: 100%;
+    font-weight: normal;
+    text-align: center;
+    font-size: 0.50667rem; }
+
+/*# sourceMappingURL=about-activities.css.map */

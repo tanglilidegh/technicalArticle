@@ -1,0 +1,96 @@
+@charset "UTF-8";
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+i {
+  font-style: normal; }
+
+/* 权益说明 文字 START */
+.interest-text {
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.73333rem;
+  padding-left: 0.53333rem;
+  width: 76%;
+  font-size: 0.18667rem;
+  text-align: left;
+  color: #e3f9e2; }
+  .interest-text p {
+    line-height: 0.34667rem; }
+  .interest-text h4 {
+    font-weight: normal;
+    margin-top: 0.37333rem;
+    margin-bottom: 0.33333rem; }
+  .interest-text .text-in {
+    text-indent: 4em; }
+
+/* 权益说明 文字 END */
+/* 行业分数标签 START */
+.industry-tag {
+  width: 95%;
+  margin: 0 auto; }
+  .industry-tag ul li {
+    display: inline-block;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    margin-left: 0.13333rem;
+    margin-right: 0.13333rem;
+    width: 26%;
+    height: 0.72rem;
+    font-size: 0.34667rem;
+    line-height: 0.72rem;
+    border-radius: 4px; }
+    .industry-tag ul li a {
+      display: block;
+      width: 100%;
+      height: 0.72rem;
+      color: #959bca;
+      background-color: rgba(146, 165, 255, 0.15); }
+    .industry-tag ul li a:hover {
+      text-decoration: none;
+      color: #d9d6ff;
+      background-color: rgba(146, 165, 255, 0.3); }
+
+/* 行业分数标签 END */
+.mb-305 {
+  margin-bottom: 4.06667rem; }
+
+.mb-160 {
+  margin-bottom: 2.13333rem; }
+
+.mb-30 {
+  margin-bottom: 0.4rem; }
+
+.mb-20 {
+  margin-bottom: 0.26667rem; }
+
+.mb-10 {
+  margin-bottom: 0.13333rem; }
+
+.mb-80 {
+  margin-bottom: 1.06667rem; }
+
+.mt-30 {
+  margin-top: 0.4rem; }
+
+.mt-20 {
+  margin-top: 0.26667rem; }
+
+.mt-10 {
+  margin-top: 0.13333rem; }
+
+.mt-54 {
+  margin-top: 0.72rem; }
+
+.mt-80 {
+  margin-top: 1.06667rem; }
+
+.mt-200 {
+  margin-top: 2.66667rem; }
+
+.mt-120 {
+  margin-top: 1.6rem; }
+
+/*# sourceMappingURL=common.css.map */

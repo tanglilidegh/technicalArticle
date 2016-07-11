@@ -1,0 +1,208 @@
+@import '../helpers/setting';
+@import '../helpers/css3';
+@import "../helpers/mixin";
+@import '../helpers/px2rem';
+@import '../animate/attention-seekers';
+@import "../animate/fade";
+@import "../animate/bounce";
+@import "../animate/slide";
+@import "../animate/lightspeed";
+@import "../main";
+
+@include animate-slideInRight;
+@include animate-tada;
+@include animate-bounceInLeft;
+@include animate-slideInLeft;
+@include animate-flash;
+@include animate-slideInDown;
+@include animate-bounceIn;
+@include animate-pulse;
+
+/* banner图中间动画部分 START */
+// 上面的两个小三角形
+.top-triangle-animate1 {
+  animation: slideInRight 2s 2s alternate;
+}
+.success-reg-page{
+  .top-triangle {
+    @include px2rem(padding-top, 50px);
+
+  }
+}
+.top-triangle {
+  width: 100%;
+  @include px2rem(height, 60px);
+  img {
+    @include px2rem(width, 590px);
+  }
+}
+
+/* 中间 黑马创交会 大字 */
+
+.big-title-animate2 {
+  animation: tada 2s 2s alternate;
+}
+
+.big-title {
+  width: 100%;
+  @include px2rem(height, 175px);
+  img {
+    @include px2rem(width, 654px);
+  }
+
+}
+
+// 下面的几个小三角形
+.bottom-triangle-animate1 {
+  animation: slideInLeft 1s 2s alternate;
+}
+
+.bottom-triangle-animate2 {
+  animation: flash 3s infinite 2s alternate;
+}
+
+.success-reg-page{
+  .bottom-triangle {
+    @include px2rem(top, 270px);
+    @include px2rem(height, 80px);
+    img {
+      @include px2rem(width, 560px);
+    }
+  }
+}
+.bottom-triangle {
+  position: absolute;
+  @include px2rem(top, 290px);
+  width: 100%;
+  @include px2rem(height, 100px);
+  img {
+    @include px2rem(width, 590px);
+  }
+}
+
+/* banner图中间动画部分 END */
+
+/* 完美收官几个大字 */
+.end-img {
+  animation: bounceIn 1s 2 2s alternate;
+}
+
+/* 预约成功结果页中间的大标题 START */
+.reservation-title h1 {
+  @include animate-bounceIn;
+  animation: bounceIn 1s 2s alternate;
+}
+
+/* 预约成功结果页中间的大标题 END */
+
+/* 中间 飞船 */
+.lb-head-animate2 {
+  animation: pulse 3s infinite 2s alternate;
+}
+
+.lb-head-animate1 {
+  animation: slideInDown 2s 2s alternate;
+}
+
+.lb-head {
+  position: absolute;
+  @include px2rem(top, 80px);
+  width: 100%;
+  @include px2rem(height, 454px);
+  img {
+    @include px2rem(width, 424px);
+  }
+}
+
+/* 中间 全行业 几个大字 */
+.lb-title {
+  position: absolute;
+  @include px2rem(top, 400px);
+  @include px2rem(margin-left, -15px);
+  width: 100%;
+  @include px2rem(height, 92px);
+  img {
+    @include px2rem(width, 253px);
+  }
+}
+
+.lb-title-animate1 {
+  animation: bounceIn 2s 2s alternate;
+}
+
+/* 外星人 */
+.lb-head2 {
+  position: absolute;
+  @include px2rem(top, 400px);
+  @include px2rem(margin-left, 30px);
+  text-align: left;
+  @include px2rem(height, 226px);
+  img {
+    @include px2rem(width, 146px);
+  }
+}
+
+.lb-head2-animate1 {
+  animation: bounceInLeft 2s 2s alternate;
+}
+
+
+
+.current .title{
+  -webkit-animation: slideToTop .8s ease both;
+}
+
+.current .subtitle{
+  -webkit-animation: slideToTop .8s 0.3s ease both;
+}
+
+.current .arrow {
+  -webkit-animation: swipeMoveTop 1.5s 1s ease infinite;
+}
+
+.current .arrow-h {
+  -webkit-animation: swipeMoveLeft 1.5s 1s ease infinite;
+}
+
+/*上滑提示*/
+@-webkit-keyframes swipeMoveTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10px, 0);
+  }
+}
+
+/*左滑提示*/
+@-webkit-keyframes swipeMoveLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(10px, 0, 0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-10px, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideToTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}

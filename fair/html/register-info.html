@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>报名填写公司信息</title>
+    <script src="../js/vendors/flexible_css.js"></script>
+    <script src="../js/vendors/flexible.js"></script>
+    <link rel="stylesheet" href="../style/component/form_verification.css">
+    <link rel="stylesheet" href="../style/component/common.css">
+</head>
+<body>
+<div class="register-info-page form-style">
+    <form action="" id="registerForm" method="post">
+        <fieldset>
+            <legend>创始人信息 <i class="btn-slide1"></i></legend>
+            <div id="panel1">
+                <label for="userName" class="mt-20">姓名</label>
+                <input type="text" class="mt-20" id="userName" name="userName" placeholder="请填写姓名">
+
+                <label for="email" class="mt-20">邮箱</label>
+                <input type="email" class="mt-20" id="email" name="email" placeholder="请填写邮箱">
+
+                <label for="weChat" class="mt-20">微信</label>
+                <input type="text" class="mt-20" id="weChat" name="weChat" placeholder="请填写微信">
+
+                <label for="post" class="mt-20">职位</label>
+                <input type="text" class="mt-20" id="post" name="post" placeholder="请填写职位">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>公司信息 <i class="btn-slide2"></i></legend>
+            <div id="panel2">
+                <label for="companyAdd" class="mt-20">公司简称</label>
+                <input type="text" class="mt-20" id="companyAdd" name="companyAdd" placeholder="请填写公司简称">
+                <label for="companyFullName" class="mt-20">公司全称</label>
+                <input type="text" id="companyFullName" class="mt-20" name="companyFullName" placeholder="请填写公司全称">
+                <label for="companyLogo" class="mt-20">公司LOGO</label>
+                <div class="fileWrap mt-20">
+                    <input type="file" class="company-file-btn" accept="image/gif,image/png,image/jpg,image/jpeg"
+                           id="companyLogo" name="companyLogo">
+                    <button type="button"><img src="../images/puls2.png" alt=""></button>
+                </div>
+                <span class="fileName">请上传文件</span>
+                <br>
+                <label for="companySlogan" class="mt-20">公司Slogan</label>
+                <input type="text" class="mt-20" id="companySlogan" name="companySlogan" placeholder="请填写公司slogan">
+                <label for="companyPhase" class="mt-20">融资阶段</label>
+                <select name="companyPhase" class="mt-20" id="companyPhase" title="请选择公司阶段">
+                    <option value="value1" selected>请选择</option>
+                    <option value="value2">初创</option>
+                    <option value="value3">A轮</option>
+                    <option value="value3">B轮</option>
+                    <option value="value3">C轮</option>
+                    <option value="value3">D轮</option>
+                    <option value="value3">E轮</option>
+                    <option value="value3">新三板上市</option>
+                    <option value="value3">纽交所上市</option>
+                    <option value="value3">纳斯达克上市</option>
+                </select>
+                <label for="companyRevenues" class="mt-20">公司营收</label>
+                <input class="short-input mt-20" type="number" id="companyRevenues" name="companyRevenues">
+                <span class="wan">万</span>
+                <label for="annualProfit" class="mt-20">年利润</label>
+                <input class="short-input mt-20" type="number" id="annualProfit" name="annualProfit">
+                <span class="wan">万</span>
+                <label for="employeesCount" class="mt-20">员工人数</label>
+                <select name="employeesCount" class="mt-20" id="employeesCount" title="请输入员工人数">
+                    <option value="value1" selected>请选择</option>
+                    <option value="value2">小于10人</option>
+                    <option value="value3">10~50人</option>
+                    <option value="value3">51~100人</option>
+                    <option value="value3">100~500人</option>
+                    <option value="value3">500~1000人</option>
+                    <option value="value3">1000~9999人</option>
+                    <option value="value3">9999人以上</option>
+                </select>
+
+                <label for="serviceArea" class="mt-20">服务范围</label>
+                <input type="text" class="mt-20" id="serviceArea" name="serviceArea" placeholder="请填写服务范围,以逗号隔开">
+                <label for="introduction" class="textarea-label mt-20">公司简介</label>
+                <textarea id="introduction" class="mt-20" name="introduction" rows="5" cols="40"
+                          placeholder="请填写公司简介"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>产品信息 <i class="btn-slide3"></i></legend>
+            <div id="panel3">
+                <div v-for="item in panels">
+                    <label for="productName" class="mt-20">产品名称</label>
+                    <input type="text" class="mt-20" v-model="item.productName" id="productName" name="productName"
+                           placeholder="请填写产品名称">
+                    <label for="price" class="mt-20">市场价</label>
+                    <input type="number" class="mt-20" v-model="item.price" id="price" name="price"
+                           placeholder="请填写产品市场价">
+                    <label for="favorablePrice" class="mt-20">创交会优惠价</label>
+                    <input type="number" class="mt-20" v-model="item.favorablePrice" id="favorablePrice"
+                           name="favorablePrice" placeholder="请填写产品创交会优惠价">
+                    <label for="favorableValidity" class="mt-20">优惠价有效期</label>
+                    <input type="date" class="mt-20" v-model="item.favorableValidity" id="favorableValidity"
+                           name="favorableValidity" placeholder="请填写服务范围,以逗号隔开">
+                    <label for="productDescription" class="textarea-label mt-20">产品介绍</label>
+                    <textarea id="productDescription" v-model="item.productDescription" class="mt-20" name="productDescription" rows="5" cols="40" placeholder="请填写产品介绍"></textarea>
+                    <div class="plus-less mt-20 mb-20">
+                        <a href="javascript:void(0)" v-show="panels.length > 1" class="less"
+                           @click="removeOne(item)"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="plus-less mt-54 mb-30">
+                <a href="javascript:void(0)" v-show="panels.length < 3" class="plus" @click="addOne()"></a>
+            </div>
+        </fieldset>
+        <button type="button" @click="submit()">下一步</button>
+    </form>
+</div>
+<!-- 前端验证的代码 请勿删,谢谢 -->
+<script src="../js/vendors/jquery-2.2.0.min.js"></script>
+<script src="../js/component/form_verification.js"></script>
+<script src="../js/vendors/vue.min.js"></script>
+<script>
+    var demo = new Vue({
+        el: 'body',
+        data: {
+            panels: [{}]
+        },
+        methods: {
+            addOne: function () {
+                if (this.panels.length >= 3) return;
+                this.panels.push({})
+            },
+            removeOne: function (item) {
+                if (this.panels.length <= 1) return;
+                this.panels.$remove(item)
+            },
+            submit(){
+                $.post("//", {product:demo.panels}, function () {
+                    alert("提交成功");
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

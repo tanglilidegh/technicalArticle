@@ -1,0 +1,288 @@
+
+@import "../../style/helpers/px2rem";
+@import "../main";
+
+
+
+body {
+  @include bg-color(#f1f0f6);
+}
+
+html {
+  @include bg-color(#f1f0f6);
+}
+
+/* 经典的 clearfix 代码 */
+.clearfix {
+  display: block;
+  zoom: 1; /* 只针对IE6/7 */
+}
+/*所有主流浏览器都支持 :after 伪元素。*/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/*------------------------------------------------ 受邀企业提交 ------------------------------------------------ */
+
+.form-style{
+  @include px2rem(padding, 30px);
+  @include font-dpr(14px);
+  label {
+    display: inline-block;
+    @include px2rem(margin-right, 15px);
+    @include px2rem(line-height, 78px);
+    color: #666;
+    text-align: right;
+  }
+  input{
+    display: inline-block;
+    outline: none;
+  }
+  input:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  input, select {
+    @include px2rem(height, 70px);
+  }
+
+  textarea {
+    padding-top: 10px;
+  }
+  textarea, input[type="text"], input[type="email"], input[type="number"], input[type="date"], select {
+    @include px2rem(padding-left, 20px);
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    @include px2rem(border-radius, 4px);
+  }
+  // form 组 的标题
+  legend {
+    color: #2cdbb2;
+    @include px2rem(line-height, 78px);
+  }
+
+  // 提交按钮
+  button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 95%;
+    @include px2rem(height, 78px);
+    @include px2rem(line-height, 78px);
+    @include px2rem(border-radius,4px);
+    border: 0;
+    @include font-dpr(18px);
+    text-align: center;
+    color: #fff;
+    background: #2cdbb2;
+    outline: none;
+  }
+  button:hover {
+    background: #10c5a5;
+  }
+  // 万字单位的样式
+  span{
+    color: #aeaeae;
+  }
+  span.wan {
+    @include px2rem(margin-left,-60px);
+  }
+
+  // 收缩的小剪头
+  legend i {
+    display: inline-block;
+    vertical-align: middle;
+    @include px2rem(margin-left,10px);
+    @include px2rem(width, 25px);
+    @include px2rem(height, 15px);
+    background: url("../../images/arrow2.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100%;
+    cursor: pointer;
+  }
+  .active {
+    background: url("../../images/arrow3.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100%;
+  }
+  input[type="button"]{
+    color: #2cdbb2;
+    background-color: transparent;
+    border: 1px solid #2cdbb2;
+    border-radius: 4px;
+    outline: none;
+  }
+
+
+}
+
+/*------------------------------------------------  当前企业提交 ------------------------------------------------ */
+
+.register-info-page {
+  label{
+    width: 30%;
+  }
+  .textarea-label{
+    vertical-align: top;
+  }
+  textarea, input {
+    width: 62%;
+  }
+  select {
+    width: 65.8%;
+  }
+  .plus-less {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    text-align: center;
+  }
+  .plus, .less {
+    display: inline-block;
+    @include px2rem(width, 60px);
+    @include px2rem(height, 60px);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 0;
+  }
+  .plus {
+    background-image: url("../../images/puls.png");
+  }
+  .less {
+    background-image: url("../../images/less.png");
+  }
+  #panel3{
+    display: block;
+    //background-color: rgba(250,250,250,.3);
+    border: 1px solid #dddddd;
+  }
+}
+.reserve-info-page{
+  // 验证码那一行
+  input[type="button"].getcode-btn {
+    @include px2rem(margin-left,10px);
+    width: 32%;
+  }
+  input[type="text"].getcode-input{
+    width: 35%;
+  }
+  textarea, input {
+    width: 72%;
+  }
+  label{
+    width: 20%;
+  }
+}
+/* 手机验证页面的样式 START */
+.phone-verification-form {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  input[type="number"] {
+    width: 90%;
+  }
+  input[type="text"] {
+    width: 56%;
+  }
+  input[type="button"] {
+    width: 30%;
+    @include px2rem(margin-left, 20px);
+  }
+}
+/* 手机验证页面的样式 END */
+
+/*------------------------------------------------ 图片上传按钮的样式 ------------------------------------------------ */
+
+/* 图片上传按钮的样式 START */
+.fileWrap {
+  display: inline-block;
+  vertical-align: middle;
+  @include px2rem(margin-top, 5px);
+  @include px2rem(margin-bottom, 5px);
+  @include px2rem(width, 100px);
+  @include px2rem(height, 70px);
+  background-color: #fff;
+  border: 3px dashed #e3e0df;
+  cursor: pointer;
+}
+
+.fileWrap input[type=file] {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.fileWrap button {
+  @include px2rem(margin-top, -63px);
+  @include px2rem(width, 45px);
+  @include px2rem(height, 45px);
+  background-color: #fff;
+  img {
+    @include px2rem(width, 45px);
+    @include px2rem(height, 45px);
+  }
+}
+
+.fileName{
+  display: inline-block;
+  vertical-align: middle;
+  @include px2rem(padding-top,10px);
+  @include px2rem(height,60px);
+  @include px2rem(line-height,70px);
+  width: 45%;
+  text-align: left;
+}
+/* 图片上传按钮的样式 END */
+
+/*------------------------------------------------ 下拉列表的样式 ------------------------------------------------ */
+/* 下拉列表的样式 START */
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #000;
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url("../../images/puls4.png") no-repeat scroll 95% center transparent;
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  @include px2rem(padding-right,25px);
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand {
+  display: none;
+}
+
+/* 下拉列表的样式 END */
+
+// placeholder的样式
+/* WebKit browsers */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #e2e2e2;
+}
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #e2e2e2;
+}
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #e2e2e2;
+}
+/* Internet Explorer 10+ */
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #e2e2e2;
+}

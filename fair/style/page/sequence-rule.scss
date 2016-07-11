@@ -1,0 +1,46 @@
+@import '../helpers/px2rem';
+@import "../helpers/css3";
+@import "../main";
+body{
+  @include bg-color(#0f1130)
+}
+html{
+  @include bg-color(#0f1130)
+}
+.sequence-rule-page {
+  @include main-page-style;
+  background-image: url("../../images/sequence-rule-bg.png");
+
+  // 排行榜排序规则 标题 START
+  .sequence-title{
+    @include sequence-title-style;
+    @include title1;
+    background-image: url("../../images/sequence-rule-title.png");
+  }
+ // 排行榜排序规则 标题  END
+
+  // 排行榜排序规则 文字  START
+  .rule-text{
+    margin: 0 auto;
+    @include px2rem(margin-top, 50px);
+    @include px2rem(padding-left, 80px);
+    @include px2rem(padding-top, 55px);
+    @include px2rem(padding-bottom, 55px);
+    @include px2rem(padding-right, 25px);
+    width: 76%;
+    @include px2rem(height, 357px);
+    @include px2rem(font-size, 24px);
+    text-align: left;
+    color: #def4ed;
+    p{
+      @include px2rem(margin-top, 30px);
+    }
+    ol{
+      list-style-type: decimal;
+      li{
+        @include px2rem(line-height, 36px);
+      }
+    }
+  }
+  // 排行榜排序规则 文字  END
+}

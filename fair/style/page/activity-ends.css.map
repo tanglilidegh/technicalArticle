@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,gBAAiB;EACf,gBAAgB,EAAE,2BAA2B;EAC7C,yBAAS;IACP,KAAK,EAAE,IAAI;ICeX,MAAY,EAAE,UAA0B;IDbxC,6BAAI;MCaJ,KAAY,EAAE,UAA0B;MAAxC,MAAY,EAAE,UAA0B",
+"sources": ["activity-ends.scss","../helpers/_px2rem.scss"],
+"names": [],
+"file": "activity-ends.css"
+}

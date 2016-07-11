@@ -1,0 +1,106 @@
+@import '../helpers/setting';
+@import '../helpers/css3';
+@import "../helpers/mixin";
+@import '../helpers/px2rem';
+@import "../helpers/reset";
+@import '../animate/attention-seekers';
+@import "../animate/fade";
+@import "../animate/bounce";
+@import "../animate/slide";
+@import "../animate/lightspeed";
+@import "../main";
+body{
+  @include bg-color(#0f1130)
+}
+html{
+  @include bg-color(#0f1130)
+}
+.activities-page {
+  position: relative;
+  @include main-page-style;
+  background-image: url("../../images/main-bg.png");
+
+  /* 时间倒计时显示 */
+  .time-item {
+    margin-left: auto;
+    margin-right: auto;
+    @include px2rem(margin-top, 90px);
+    box-sizing: border-box;
+    @include px2rem(padding-top, 32px);
+    @include px2rem(padding-left, 35px);
+    @include px2rem(width, 560px);
+    @include px2rem(height, 220px);
+    border: 1px solid #fff;
+    border-radius: 15px;
+    text-align: left;
+    background: rgba(55,53,118,.3);
+
+    strong {
+      display: inline-block;
+      @include px2rem(font-size, 56px);
+      @include px2rem(line-height, 115px);
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  // 时分秒的数字
+  .time-num {
+    @include px2rem(width, 120px);
+    @include px2rem(height, 115px);
+    border: 1px solid #fff;
+    border-radius: 15px;
+    @include px2rem(line-height, 115px);
+    @include gradient-vertical(rgba(0,0,0,.0) 48%, rgba(255,255,255,.1) 52%);
+  }
+
+  // 冒号
+  .colon {
+    @include px2rem(margin-left, 18px);
+    @include px2rem(margin-right, 18px);
+
+  }
+
+  // 时分秒文字
+  .time-text {
+    @include px2rem(margin-top, 10px);
+    span{
+      display: inline-block;
+      @include px2rem(width, 115px);
+      @include px2rem(font-size, 38px);
+      text-align: center;
+    }
+    .margin20{
+      @include px2rem(margin-left, 65px);
+      @include px2rem(margin-right, 65px);
+    }
+  }
+
+  // 统计文字
+  .sign-up-count{
+    @include px2rem(margin-top, 120px);
+    text-align: center;
+    letter-spacing: 0.1em;
+    p{
+      @include font-dpr(14px);
+      //@include px2rem(font-size, 32px);
+      color: #b9c4ff;
+      strong{
+        color: #4afed4;
+        @include font-dpr(18px);
+        //@include px2rem(font-size, 40px);
+        font-weight: 900;
+      }
+    }
+    .text-indent-p1{
+      text-indent: -0.3em;
+    }
+    .text-indent-p2{
+      text-indent: -1em;
+    }
+  }
+
+  .reservation-text{
+    @include font-dpr(14px);
+  }
+}
