@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";AAoCA,8BAA8B;AAc9B,6BAA6B;ACD7B,uBAAuB;AAQvB,uBAAuB",
-"sources": ["helpers/_px2rem.scss","main.scss"],
-"names": [],
-"file": "main.css"
-}
