@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!--主要是针对苹果手机将数字自动识别为号码-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--控制手机布局，width默认为屏幕大小-->
+    <meta name="HandheldFriendly" content="True">
+    <!--控制手机放大缩小网页显示--><!--开启对web app的支持-->
+    <meta name="MobileOptimized" content="width">
+    <title>发布需求</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<form action='' method='post'>
+    <!-- 分类标题 -->
+    <div class="classify-title evaluation-nav-title cf">
+        <h4 class="fl">需求描述</h4>
+    </div>
+    <div class="message mb-20">
+        <label>
+            <textarea class="big-msg msg" name="demand_message" placeholder="请描述您的具体要求(越清晰越具体越好)，服务商或是 个人服务者可以更好的为您服务～"></textarea>
+        </label>
+    </div>
+    <!-- 分类标题 -->
+    <div class="classify-title evaluation-nav-title cf">
+        <h4 class="fl">选择需求分类</h4>
+    </div>
+    <!-- 需求分类 -->
+    <div class="demand-fair mb-100">
+        <div class="demand-list">
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">基础支撑</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">工商服务</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">财会税务</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">资质认证</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">知产法务</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">企业软件</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">营销推广</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">经营管理</a>
+            <a href="#" class="class-type"><input type="radio" name="class_type" style="display: none">其他</a>
+        </div>
+    </div>
+
+    <!-- 底部按钮 -->
+    <div class="bottom-btn">
+        <div class="default-btn" id="releaseRequirements"><a href="#">发布需求</a></div>
+    </div>
+</form>
+<!-- 底部导航 -->
+<div class="bottom-nav">
+    <ul>
+        <li>
+            <a href="#">
+                <i class="home"></i>
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="classify"></i>
+                <p>分类</p>
+            </a>
+        </li>
+        <li class="bottom-nav-active">
+            <a href="#">
+                <i class="demand"></i>
+                <p>需求</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="me"></i>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="js/flexible.js"></script>
+<script src="js/jquery-2.2.0.min.js"></script>
+    <script>
+    $(function () {
+        $('.class-type').on('click', function () {
+            $('.current-tag').removeClass('current-tag');
+            $(this).addClass('current-tag');
+            $(this).children('input').prop('checked', true);
+        });
+
+        $('#releaseRequirements').on('click', function () {
+            var message = $('textarea[name="demand_message"]').val();
+            var classType = $('input:checked').val();
+
+            if (!message) {
+                alert('请填写需求描述');
+                return false;
+            }
+            if (!classType) {
+                alert('请选择需求分类');
+                return false;
+            }
+            $('form').submit();
+        })
+    });
+    </script>
+<script src="js/common.js"></script>
+<script src="js/floatmenu.js"></script>
+</html>
